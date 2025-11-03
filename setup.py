@@ -1,8 +1,17 @@
 import setuptools
+import re
+from pathlib import Path
+
+FALLBACK_VERSION = "0.0.1"
+
+with open("./pptx2md/main.py", "r") as f:
+    data = f.read()
+    version = re.findall(r'PPTX2MD_VERSION\s=\s\"(.+?)\"', data)
+    version = version[0] if version[0] else FALLBACK_VERSION
 
 setuptools.setup(
     name="pptx2md",
-    version="0.0.1",
+    version=version,
     author="sigilpunk",
     author_email="jskresl@gmail.com",
     packages=["pptx2md"],
