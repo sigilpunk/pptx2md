@@ -1,6 +1,5 @@
 setup.py
 pptx2md/__init__.py
-pptx2md/initgen.py
 pptx2md/main.py
 pptx2md.egg-info/PKG-INFO
 pptx2md.egg-info/SOURCES.txt
